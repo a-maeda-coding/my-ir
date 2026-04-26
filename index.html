@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyIR</title>
+
+  <!-- フォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 全体 -->
+  <div class="page">
+
+    <!-- タイトル -->
+    <header class="hero">
+      <div class="hero-inner">
+        <h1 id="title">✨ My IR ✨</h1>
+        <h2>🐰 Sample Name 💌</h2>
+      </div>
+    </header>
+
+    <!-- 過去 -->
+    <section class="card">
+      <h3>🌷✨ 過去（Past） ✨💌</h3>
+      <ul>
+        <li>看護師として働く</li>
+        <li>働く中で、自分に合う働き方を考え始める</li>
+        <li>子育てをきっかけに働き方を見直す</li>
+      </ul>
+    </section>
+
+    <!-- 現在 -->
+    <section class="card">
+      <h3>💌✨ 現在（Present） ✨💌</h3>
+      <ul>
+        <li>ITの勉強中</li>
+        <li>Web分野で自分に合う道を模索している</li>
+        <li>コツコツできる仕事が合っていると気づく</li>
+        <li>無理しすぎないことを大切にしている</li>
+        <li>仕事と家庭のバランスを模索中</li>
+      </ul>
+    </section>
+
+    <!-- 未来 -->
+    <section class="card">
+      <h3>🫧✨ 未来（Future） ✨🫧</h3>
+      <ul>
+        <li>場所にとらわれず働きたい</li>
+        <li>スキルで安定して稼ぎたい</li>
+        <li>家族との時間も大切にしたい</li>
+        <li>自分のペースで続けられる働き方をしたい</li>
+      </ul>
+    </section>
+
+    <!-- お問い合わせ -->
+    <div class="contact">
+      <button class="btn" disabled>
+        <span class="icon-mail">💌</span> お問い合わせ準備中
+      </button>
+    </div>
+
+  </div>
+
+  <!-- うさぎエリア -->
+  <div class="rabbit-area">
+    <div id="speech" class="speech"></div>
+    <img id="icon" src="rabbit.jpg" alt="うさぎ" onclick="petRabbit()">
+  </div>
+
+  <!-- JS読み込み -->
+  <script src="script.js"></script>
+
+</body>
+</html>

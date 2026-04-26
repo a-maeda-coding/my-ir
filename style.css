@@ -1,0 +1,301 @@
+/* ページ全体の基本設定 */
+body {
+  margin: 0;
+  font-family: 'Kiwi Maru', serif;
+  color: #444;
+  background-color: #fff0f5;
+
+  /* 白いドット柄 */
+  background-image: radial-gradient(#ffffff 2px, transparent 2px);
+  background-size: 20px 20px;
+  font-size: 16px;
+}
+
+/* 全体の横幅を整える箱 */
+.page {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto 10px;
+  padding-left: 40px;
+
+  /* ページ全体の右余白（右下のうさぎと被りにくくする） */
+  padding-right: clamp(16px, 5vw, 180px);
+
+  box-sizing: border-box;
+}
+
+/* タイトル部分 */
+.hero {
+  margin-bottom: 30px;
+}
+
+/* 幅合わせ用の透明な箱 */
+.hero-inner {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* メインタイトル */
+.hero h1 {
+  margin: 0;
+  font-size: 56px;
+  color: #ff7cab;
+  text-shadow: 2px 2px 0 #ffd6e5;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* サブタイトル */
+.hero h2 {
+  margin-top: 18px;
+  font-size: 30px;
+  color: #5f5f5f;
+}
+
+/* 各セクションのカード */
+.card {
+  background: #f7f7f7;
+  border: 4px solid #f6b6cb;
+  border-radius: 28px;
+  width: 100%;
+  max-width: 700px;
+
+  /* カード側の下余白 */
+  margin: 32px auto 24px;
+
+  padding: 48px 56px;
+  box-shadow: 0 6px 12px rgba(255, 160, 190, 0.15);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* カードがふわっと浮く */
+.card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 10px 24px rgba(255, 160, 190, 0.18);
+}
+
+/* カード見出し */
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #ff76a8;
+  font-weight: 700;
+}
+
+/* 箇条書き */
+.card ul {
+  margin: 0;
+  padding-left: 28px;
+}
+
+/* 箇条書きの1行ずつ */
+.card li {
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 4px;
+}
+
+/* お問い合わせ */
+.contact {
+  text-align: center;
+
+  /* カードとの距離と下の余白を調整 */
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+
+/* お問い合わせボタン */
+.btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 16px 32px;
+  background: linear-gradient(45deg, #ff8fab, #ffb3c6);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 5px 0 #e89aad;
+  transition: 0.2s;
+  font-family: 'Kiwi Maru', 'Hiragino Sans', sans-serif;
+}
+
+.btn:hover {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #e89aad;
+}
+
+/* ボタン（メールアイコン） */
+.icon-mail {
+  font-size: 20px;
+  margin-right: 5px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.btn:hover .icon-mail {
+  transform: scale(1.2);
+}
+
+/* うさぎ全体の位置 */
+.rabbit-area {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+}
+
+/* ふわふわアニメーション */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* 右下のうさぎ */
+#icon {
+  width: 90px;
+  border-radius: 50%;
+  border: 4px solid #ffb3c6;
+  display: block;
+  cursor: pointer;
+
+  /* ふわふわ */
+  animation: float 3s ease-in-out infinite;
+
+  /* 影（やさしめ） */
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.04),
+    0 4px 10px rgba(0, 0, 0, 0.02);
+
+  /* なめらか */
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+/* 触ったとき（浮く） */
+#icon:hover {
+  animation: none; /* ふわふわ停止 */
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.06),
+    0 8px 18px rgba(0, 0, 0, 0.03);
+}
+
+/* 押したとき（沈む） */
+#icon:active {
+  animation: none;
+  transform: translateY(1px);
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.03),
+    0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* 吹き出し */
+.speech {
+  position: absolute;
+  bottom: 110px;
+  right: 0;
+  background: #fff8fc;
+  color: #555;
+  border: 3px solid #ffb3c6;
+  border-radius: 18px;
+  padding: 12px 16px;
+  width: 260px;
+  font-size: 15px;
+  line-height: 1.7;
+  box-shadow: 0 4px 10px rgba(255, 160, 190, 0.2);
+
+  /* 最初は非表示 */
+  display: none;
+}
+
+/* 吹き出しのしっぽ */
+.speech::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  right: 28px;
+  border-width: 12px 10px 0 10px;
+  border-style: solid;
+  border-color: #ffb3c6 transparent transparent transparent;
+}
+
+/* 中の白っぽい三角を重ねる */
+.speech::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 30px;
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color: #fff8fc transparent transparent transparent;
+}
+
+/* 表示するとき */
+.speech.show {
+  display: block;
+}
+
+/* 画面が狭いとき用 */
+@media (max-width: 480px) {
+  .page {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    white-space: normal;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .hero h2 {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 6px;
+  }
+
+  .card {
+    width: 100%;
+    min-width: auto;
+    padding: 20px 16px;
+  }
+
+  .card h3 {
+    font-size: 24px;
+  }
+
+  .card li {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  #icon {
+    width: 72px;
+  }
+
+  .rabbit-area {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .speech {
+    width: 160px;
+    font-size: 12px;
+    bottom: 90px;
+  }
+}
