@@ -1,7 +1,7 @@
 # My IR Page
 
 HTML / CSS / JavaScript を使用して作成した自己紹介Webページです。  
-https://あなたのURL.github.io/my-ir/
+https://a-maeda-coding.github.io/my-ir/
 
 ---
 
@@ -46,7 +46,3 @@ https://あなたのURL.github.io/my-ir/
 
 ## 📌 補足
 ※本ページはポートフォリオ用に一部内容を調整しています
-
----
-
-https://a-maeda-coding.github.io/my-ir/
